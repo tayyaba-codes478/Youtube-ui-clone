@@ -1,0 +1,117 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TubeSpace | Discover Videos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <button class="icon-btn menu-btn" id="menuBtn" aria-label="Toggle menu">☰</button>
+
+    <a href="#" class="brand">
+      <span class="brand-icon">▶</span>
+      Tube<span>Space</span>
+    </a>
+
+    <form class="search-box" id="searchForm">
+      <input id="searchInput" type="search" placeholder="Search videos, channels..." autocomplete="off">
+      <button type="submit" aria-label="Search">⌕</button>
+    </form>
+
+    <button class="icon-btn theme-btn" id="themeBtn" aria-label="Toggle theme">☀</button>
+    <button class="profile" id="profileBtn" aria-label="Profile">T</button>
+  </header>
+
+  <aside class="sidebar" id="sidebar">
+    <nav>
+      <button class="nav-link active" data-nav="Home"><span>⌂</span>Home</button>
+      <button class="nav-link" data-nav="Shorts"><span>ϟ</span>Shorts</button>
+      <button class="nav-link" data-nav="Subscriptions"><span>▣</span>Subscriptions</button>
+      <div class="side-divider"></div>
+      <p class="side-heading">YOU</p>
+      <button class="nav-link" data-nav="History"><span>◷</span>History</button>
+      <button class="nav-link" data-nav="Watch later"><span>◴</span>Watch later</button>
+      <button class="nav-link" data-nav="Liked videos"><span>♡</span>Liked videos</button>
+      <div class="side-divider"></div>
+      <p class="side-heading">EXPLORE</p>
+      <button class="nav-link" data-nav="Trending"><span>↗</span>Trending</button>
+      <button class="nav-link" data-nav="Music"><span>♫</span>Music</button>
+      <button class="nav-link" data-nav="Gaming"><span>♧</span>Gaming</button>
+      <button class="nav-link" data-nav="Technology"><span>⌘</span>Technology</button>
+      <button class="nav-link" data-nav="Travel"><span>✈</span>Travel</button>
+      <button class="nav-link" data-nav="Cooking"><span>♨</span>Cooking</button>
+      <div class="side-divider"></div>
+      <div class="sidebar-note">
+        <div class="note-icon">✦</div>
+        <strong>Your next favorite</strong>
+        <p>Discover something inspiring today.</p>
+        <button id="surpriseBtn">Surprise me ↗</button>
+      </div>
+    </nav>
+  </aside>
+
+  <main class="main-content">
+    <div class="category-bar" id="categoryBar">
+      <button class="category active" data-category="All">All</button>
+      <button class="category" data-category="Music">Music</button>
+      <button class="category" data-category="Gaming">Gaming</button>
+      <button class="category" data-category="Technology">Technology</button>
+      <button class="category" data-category="Coding">Coding</button>
+      <button class="category" data-category="Travel">Travel</button>
+      <button class="category" data-category="Cooking">Cooking</button>
+      <button class="category" data-category="Education">Education</button>
+      <button class="category" data-category="Lifestyle">Lifestyle</button>
+      <button class="category" data-category="Design">Design</button>
+    </div>
+
+    <section class="welcome-banner">
+      <div class="banner-content">
+        <span class="eyebrow">YOUR DAILY DISCOVERY</span>
+        <h1>Find your next <span>inspiration.</span></h1>
+        <p>Fresh ideas, creative worlds, and something new to explore.</p>
+        <button id="exploreBtn" class="primary-btn">Explore videos <span>↗</span></button>
+      </div>
+      <div class="banner-art" aria-hidden="true">
+        <div class="art-orbit orbit-one"></div>
+        <div class="art-orbit orbit-two"></div>
+        <div class="art-play">▶</div>
+        <div class="art-star star-one">✦</div>
+        <div class="art-star star-two">✧</div>
+      </div>
+    </section>
+
+    <div class="section-heading">
+      <div>
+        <p class="eyebrow">HANDPICKED FOR YOU</p>
+        <h2 id="sectionTitle">Recommended videos</h2>
+      </div>
+      <span class="result-count" id="resultCount"></span>
+    </div>
+
+    <div class="video-grid" id="videoGrid"></div>
+
+    <div class="empty-state hidden" id="emptyState">
+      <div class="empty-icon">⌕</div>
+      <h3>No videos found</h3>
+      <p>Try another search or choose a different category.</p>
+      <button class="primary-btn" id="resetBtn">Show all videos</button>
+    </div>
+
+    <footer class="footer">
+      <a href="#" class="brand footer-brand"><span class="brand-icon">▶</span>Tube<span>Space</span></a>
+      <p>A little space for a lot of inspiration.</p>
+      <span>Demo project · No actual video playback</span>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
